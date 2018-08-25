@@ -43,19 +43,18 @@ $("#car-button1+").on("click", function(displayInfo) {
     })    .then(function(response) {
         var imageUrl = response.data.image_original_url;
 
-        // Creating and storing an image tag
+        
         var carImage = $("<img>");
 
-        // Setting the catImage src attribute to imageUrl
         catImage.attr("src", imageUrl);
         catImage.attr("alt", "cat image");
         console.log(response);
 
-        // Prepending the catImage to the images div
         $("#images").prepend(carImage);
         console.log(response);
     });
     console.log(response);
+
     
     
 
